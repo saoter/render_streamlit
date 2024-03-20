@@ -1,0 +1,8 @@
+#uvicorn
+#fastapi 
+#docker
+seaborn
+pandas
+sqlite3
+scikit-learn
+joblib
