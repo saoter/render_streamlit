@@ -3,6 +3,5 @@ fastapi
 docker
 seaborn
 pandas
-sqlite3-python
 scikit-learn
 joblib
