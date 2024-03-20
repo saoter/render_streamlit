@@ -1,6 +1,6 @@
-#uvicorn
-#fastapi 
-#docker
+uvicorn
+fastapi 
+docker
 seaborn
 pandas
 sqlite3
