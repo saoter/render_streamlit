@@ -1,7 +1,5 @@
 docker
 seaborn
 pandas
-scikit-learn
-joblib
 streamlit
 requests
