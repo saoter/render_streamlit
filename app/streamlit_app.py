@@ -36,7 +36,7 @@ body_mass_g = st.number_input("Body Mass (g)", min_value=0.0, format="%.2f")
 
 # Predict button
 if st.button("Predict"):
-    # API payload
+    # Preparing the payload for the POST request
     payload = {
         "prediction_model_id": model_id,
         "bill_length_mm": bill_length_mm,
@@ -44,11 +44,12 @@ if st.button("Predict"):
         "flipper_length_mm": flipper_length_mm,
         "body_mass_g": body_mass_g
     }
-    # Make API call for prediction
+    # Making the POST request to the FastAPI prediction endpoint
     response = requests.post("https://render-fastapi-ku5n.onrender.com/predict/", json=payload)
     if response.status_code == 200:
+        # Processing and displaying the prediction result
         prediction = response.json()["prediction"]
-        # Display prediction
         st.write(f"## Predicted Penguin Species: {prediction}")
     else:
-        st.error("Failed to make prediction.")
+        # Handling failed prediction attempts
+        st.error(f"Failed to make prediction. Status code: {response.status_code} Response: {response.text}")
