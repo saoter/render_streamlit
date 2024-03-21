@@ -18,7 +18,7 @@ def fetch_model_details(model_id):
 
 # Model selection
 model_options = {
-    "Model 1": 1,  # Assuming model IDs are integers
+    "Model 1": 1, 
     "Model 2": 2,
 }
 model_name = st.selectbox("Select a Model", options=list(model_options.keys()))
