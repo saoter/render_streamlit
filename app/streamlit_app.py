@@ -18,8 +18,8 @@ def fetch_model_details(model_id):
 
 # Model selection
 model_options = {
-    "Model 1": 1, 
-    "Model 2": 2,
+    "Model 1": 101, 
+    "Model 2": 102,
 }
 model_name = st.selectbox("Select a Model", options=list(model_options.keys()))
 model_id = model_options[model_name]
