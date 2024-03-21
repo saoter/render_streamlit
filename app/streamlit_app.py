@@ -9,7 +9,7 @@ st.title("Penguin Species Predictor")
 def fetch_model_details(model_id):
     response = requests.get(f"https://render-fastapi-ku5n.onrender.com/model/?model_id={model_id}")
     if response.status_code == 200:
-        model_details = response.json()["model"][0]  # Assuming the response has a "model" key with a list of models
+        model_details = response.json()["model"][0]  
         st.write("### Selected Model Details")
         for key, value in model_details.items():
             st.write(f"{key}: {value}")
