@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from joblib import load
+import requests
 
 # Streamlit app
 st.title("Penguin Species Predictor")
