@@ -38,7 +38,7 @@ body_mass_g = st.number_input("Body Mass (g)", min_value=0.0, format="%.2f")
 if st.button("Predict"):
     # Preparing the payload for the POST request
     payload = {
-        "prediction_model_id": model_id,
+        "prediction_model_id": model_id - 100,
         "bill_length_mm": bill_length_mm,
         "bill_depth_mm": bill_depth_mm,
         "flipper_length_mm": flipper_length_mm,
